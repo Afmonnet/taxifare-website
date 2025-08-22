@@ -8,7 +8,12 @@ st.markdown('''
 ### 🐤 DuckDuck TaxiDrive
 ''')
 
-f"Ride NY with us!"
+
+st.markdown('''
+## *Ride NY with us!*
+''')
+
+
 #Either as with the title by just creating a string (or an f-string). Or as with this paragraph using the `st.` functions
 
 
