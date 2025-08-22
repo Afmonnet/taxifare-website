@@ -5,25 +5,13 @@ import pandas as pd
 
 
 st.markdown('''
-🐤DuckTaxiDrive
+### 🐤 DuckDuck TaxiDrive
 ''')
 
 f"Ride NY with us!"
 #Either as with the title by just creating a string (or an f-string). Or as with this paragraph using the `st.` functions
 
 
-
-'''
-## Here we would like to add some controllers in order to ask the user to select the parameters of the ride
-
-1. Let's ask for:
-- date and time
-- pickup longitude
-- pickup latitude
-- dropoff longitude
-- dropoff latitude
-- passenger count
-'''
 
 pickup_datetime = st.date_input("Pickup date", datetime.date(2025,8,22))
 st.write('Date de pickup:', pickup_datetime)
@@ -43,13 +31,17 @@ st.write('Longitude du dropoff', dropoff_longitude)
 dropoff_latitude = st.number_input('Dropoff latitude', value =40.7891)
 st.write('Latitude du dropoff', dropoff_latitude)
 
-passenger_count = st.slider(
-    label="Passenger count",
-    min_value=1,
-    max_value=6,
-    value=3,   # default position
-    step=1     # integer step
-)
+
+passenger_count = st.number_input('Passenger count', value =2)
+st.write('Passenger count', passenger_count)
+
+# passenger_count = st.slider(
+#     label="Passenger count",
+#     min_value=1,
+#     max_value=6,
+#     value=3,   # default position
+#     step=1     # integer step
+# )
 st.write('Nombre de passagers', passenger_count)
 
 
